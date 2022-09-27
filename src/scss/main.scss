@@ -1,0 +1,21 @@
+@use "sass:list";
+@use "sass:string";
+@import 'utils/config', 'utils/utils', 'utils/button', 'parts/header', 'parts/footer', 'parts/search', 'parts/search-hdr', 'parts/search-output';
+
+header {
+   @extend %header;
+}
+main {
+   h1 {
+	  @extend %search-hdr;
+   }
+   #search-entry {
+	  @extend %search-entry;
+   } 
+   #search-output {
+	  @extend %search-output;
+   }
+}
+footer {
+   @extend %footer;
+}

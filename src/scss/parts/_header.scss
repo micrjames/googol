@@ -1,0 +1,38 @@
+%header {
+    display: flex;
+    justify-content: space-between;
+
+	background-color: lightgray;
+    padding: 1.25rem 2rem;
+    #company-identifier {
+	   #logo-icon {
+		  font-size: 1.45rem;
+		  color: blue; 
+	   }
+	   #company-name {
+		  margin-left: 5px;
+		  font-size: 1.5rem;
+	   }
+   }
+   nav {
+	  margin-top: 0.35rem;
+	  margin-right: 2rem;
+	  menu {
+		 list-style-type: none;
+		 li {
+			font-size: 1.2rem;
+			display: inline;
+			cursor: pointer;
+
+			@include transition-ease;
+
+			&:not(:last-child) {
+			   margin-right: 1.2rem;
+			}
+			&:hover {
+			   font-weight: bolder;
+			}
+		 }
+	  }
+   }
+}

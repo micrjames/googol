@@ -1,0 +1,21 @@
+$hdr-str-color-list: blue, red, yellow, blue, green, red;  
+$hdr-str: "Googol";  
+
+%search-hdr {   
+   margin: 15vh 0;
+   text-align: center;
+   font-size: 3.5rem;
+   @for $i from 1 through list.length($hdr-str-color-list) {
+       span:nth-child(#{$i}) {
+		  &::after {
+			  content: "#{string.slice($hdr-str, $i, $i)}";
+			  color: list.nth($hdr-str-color-list, $i);
+		  }
+	   }
+   }
+ 
+   &::after {
+       content: "!";
+	   color: blue;
+  }
+}

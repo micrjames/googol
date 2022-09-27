@@ -1,0 +1,172 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 1.25rem 2rem;
+}
+header #company-identifier #logo-icon {
+  font-size: 1.45rem;
+  color: blue;
+}
+header #company-identifier #company-name {
+  margin-left: 5px;
+  font-size: 1.5rem;
+}
+header nav {
+  margin-top: 0.35rem;
+  margin-right: 2rem;
+}
+header nav menu {
+  list-style-type: none;
+}
+header nav menu li {
+  font-size: 1.2rem;
+  display: inline;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+header nav menu li:not(:last-child) {
+  margin-right: 1.2rem;
+}
+header nav menu li:hover {
+  font-weight: bolder;
+}
+
+footer {
+  background-color: lightgray;
+  font-size: 1.15rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.95rem;
+}
+footer #site-info ul {
+  list-style-type: none;
+}
+footer #site-info ul li {
+  display: inline;
+  cursor: pointer;
+}
+footer #site-info ul li:not(:last-child) {
+  margin-right: 1.2rem;
+}
+footer #copyright-info {
+  font-size: 1rem;
+}
+
+main #search-entry {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  display: flex;
+  border: 2px solid lightgrey;
+  border-radius: 500px;
+  padding: 0.25rem 0.15rem 0.25rem 0.25rem;
+  margin: -10vh 0;
+}
+main #search-entry form {
+  width: 100%;
+}
+main #search-entry form button {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: 0.35rem;
+  margin: 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
+main #search-entry form input[type=search] {
+  font-size: 1.25rem;
+  width: 90%;
+  padding: 5px 10px;
+  text-align: left;
+  border-radius: 500px;
+  letter-spacing: 0.1rem;
+  border: 0;
+  outline: 0;
+}
+main #search-entry form input[type=search]::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
+  /* Now your own custom styles */
+  height: 25px;
+  width: 25px;
+  background: url("../images/cancel.png");
+  cursor: pointer;
+}
+
+main h1 {
+  margin: 15vh 0;
+  text-align: center;
+  font-size: 3.5rem;
+}
+main h1 span:nth-child(1)::after {
+  content: "G";
+  color: blue;
+}
+main h1 span:nth-child(2)::after {
+  content: "o";
+  color: red;
+}
+main h1 span:nth-child(3)::after {
+  content: "o";
+  color: yellow;
+}
+main h1 span:nth-child(4)::after {
+  content: "g";
+  color: blue;
+}
+main h1 span:nth-child(5)::after {
+  content: "o";
+  color: green;
+}
+main h1 span:nth-child(6)::after {
+  content: "l";
+  color: red;
+}
+main h1::after {
+  content: "!";
+  color: blue;
+}
+
+main #search-output {
+  margin: 10px 20vw;
+}
+main #search-output #searching {
+  font-size: 1.5rem;
+}
+main #search-output #searching::after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "…";
+  width: 0;
+}
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
