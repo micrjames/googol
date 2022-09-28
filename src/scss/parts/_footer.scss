@@ -3,7 +3,10 @@
    font-size: 1.15rem;
    width: 100%;
    position: absolute;
-   bottom: 0;
+   bottom: -100vh;
+   @include md {
+	  bottom: 0;
+   }
    display: flex;
    flex-direction: column;
    align-items: flex-end;

@@ -1,3 +1,5 @@
+@import "../utils/strAltColors";
+
 %header {
     display: flex;
     justify-content: space-between;
@@ -8,10 +10,20 @@
 	   #logo-icon {
 		  font-size: 1.45rem;
 		  color: blue; 
+
+		  @include md{
+			 visibility: hidden;
+		  }
 	   }
 	   #company-name {
 		  margin-left: 5px;
 		  font-size: 1.5rem;
+		  @include str-alt-colors("Googol!");
+
+		  visibility: hidden;
+		  @include md{
+			 visibility: visible;
+		  }
 	   }
    }
    nav {
@@ -34,8 +46,6 @@
 			}
 
 			i {
-			   &:disabled {
-			   }
 			}
 		 }
 	  }
