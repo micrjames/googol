@@ -1,8 +1,11 @@
-$hdr-str-color-list: blue, red, yellow, blue, green, red;  
-$hdr-str: "Googol";  
+@use "sass:list";
+@use "sass:string";
+
+$hdr-str-color-list: blue, red, yellow, blue, green, red, blue;  
+$hdr-str: "Googol!";  
 
 %search-hdr {   
-   margin: 15vh 0;
+   margin: 15px 0;
    text-align: center;
    font-size: 3.5rem;
    @for $i from 1 through list.length($hdr-str-color-list) {
@@ -13,9 +16,4 @@ $hdr-str: "Googol";
 		  }
 	   }
    }
- 
-   &::after {
-       content: "!";
-	   color: blue;
-  }
 }

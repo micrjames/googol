@@ -26,22 +26,32 @@
 	    </header>
 	    <main id="main">
 		    <div id="search" class="hidden">
-			   <h1>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-			   </h1>
-			   <section id="search-entry">
-				  <form name="search-form">
-					  <button name="submit-btn" type="submit">
-						  <i class="fa-solid fa-magnifying-glass"></i>
-					  </button>
-					  <input name="search-term" type="search" maxlength="45">
-				  </form>
-			   </section>
+			   <div class="modal-header">
+				  <div class="modal-header-close">
+					 <i class="fa-solid fa-xmark"></i>
+				  </div>
+				  <div class="modal-header-text">
+					 <h1>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					 </h1>
+				  </div>
+			   </div>
+			   <div class="modal-body">
+				  <section id="search-entry">
+					 <form name="search-form">
+						 <button name="submit-btn" type="submit">
+							 <i class="fa-solid fa-magnifying-glass"></i>
+						 </button>
+						 <input name="search-term" type="search" maxlength="45">
+					 </form>
+				  </section>
+			   </div>
 			</div>
 			<section id="search-output" class="hidden">
 			   <div id="searching">

@@ -1,21 +1,24 @@
 @use "sass:list";
 @use "sass:string";
-@import 'utils/config', 'utils/utils', 'utils/button', 'parts/header', 'parts/footer', 'parts/search', 'parts/search-hdr', 'parts/search-output';
+@import 'utils/config', 'utils/utils', 'utils/button', 'parts/header', 'parts/footer', 'parts/search/search-output', 'modal/modal';
+
+$modal-width: 90%;
+$modal-bg-color: white;
+$modal-text-color: black;
 
 header {
    @extend %header;
 }
 main {
    #search {
-	  h1 {
-		 @extend %search-hdr;
-	  }
-	  #search-entry {
-		 @extend %search-entry;
-	  } 
+	  @include modal($modal-width, $modal-bg-color, $modal-text-color, true);
+	  @include box-shadow(0, 3px, 10px, 0, rgb(0 0 0 / 0.2), false);
    }
    #search-output {
 	  @extend %search-output;
+   }
+   #search.hidden {
+	  display: none;
    }
 }
 footer {

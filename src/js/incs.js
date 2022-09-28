@@ -11,7 +11,8 @@ const search = main.children.namedItem("search");
 
 const searchForm = document.forms["search-form"];
 const submitBtn = searchForm.elements["submit-btn"];
+const searchTerm = searchForm.elements["search-term"];
 
 const searchOutput = main.children.namedItem("search-output");
 
-export { searchTrigger, search, submitBtn, searchOutput };
+export { searchTrigger, search, searchTerm, submitBtn, searchOutput };

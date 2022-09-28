@@ -1,0 +1,13 @@
+@import '../utils/button', 'parts/search/search', 'parts/search/search-hdr';
+
+$primary-color:  #282828;
+$secondary-color: #ff652f;
+
+%modal-body {
+	h1 {
+		@extend %search-hdr;
+	}
+	#search-entry {
+		@extend %search-entry;
+	}
+}

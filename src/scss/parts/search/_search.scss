@@ -1,14 +1,8 @@
 %search-entry {
-	 position: absolute;
-	 left: 50%;
-	 transform: translateX(-50%);
-
-	 width: 60vw;
 	 display: flex;
 	 border: 2px solid lightgrey;
 	 border-radius: 500px;
 	 padding: 0.25rem 0.15rem 0.25rem 0.25rem;
-	 margin: -10vh 0;
 
 	 form {
 		width: 100%;
