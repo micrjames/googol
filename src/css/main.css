@@ -42,6 +42,10 @@ header nav menu li:not(:last-child) {
 header nav menu li:hover {
   font-weight: bolder;
 }
+header nav menu li i:hover {
+  font-size: 1.5rem;
+  transition: rotate(180deg);
+}
 
 footer {
   background-color: lightgray;
@@ -68,7 +72,7 @@ footer #copyright-info {
   font-size: 1rem;
 }
 
-main #search-entry {
+main #search #search-entry {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -79,10 +83,10 @@ main #search-entry {
   padding: 0.25rem 0.15rem 0.25rem 0.25rem;
   margin: -10vh 0;
 }
-main #search-entry form {
+main #search #search-entry form {
   width: 100%;
 }
-main #search-entry form button {
+main #search #search-entry form button {
   display: inline-block;
   background: #000;
   color: #fff;
@@ -97,7 +101,7 @@ main #search-entry form button {
   background-color: transparent;
   color: black;
 }
-main #search-entry form input[type=search] {
+main #search #search-entry form input[type=search] {
   font-size: 1.25rem;
   width: 90%;
   padding: 5px 10px;
@@ -107,7 +111,7 @@ main #search-entry form input[type=search] {
   border: 0;
   outline: 0;
 }
-main #search-entry form input[type=search]::-webkit-search-cancel-button {
+main #search #search-entry form input[type=search]::-webkit-search-cancel-button {
   /* Remove default */
   -webkit-appearance: none;
   /* Now your own custom styles */
@@ -117,36 +121,36 @@ main #search-entry form input[type=search]::-webkit-search-cancel-button {
   cursor: pointer;
 }
 
-main h1 {
+main #search h1 {
   margin: 15vh 0;
   text-align: center;
   font-size: 3.5rem;
 }
-main h1 span:nth-child(1)::after {
+main #search h1 span:nth-child(1)::after {
   content: "G";
   color: blue;
 }
-main h1 span:nth-child(2)::after {
+main #search h1 span:nth-child(2)::after {
   content: "o";
   color: red;
 }
-main h1 span:nth-child(3)::after {
+main #search h1 span:nth-child(3)::after {
   content: "o";
   color: yellow;
 }
-main h1 span:nth-child(4)::after {
+main #search h1 span:nth-child(4)::after {
   content: "g";
   color: blue;
 }
-main h1 span:nth-child(5)::after {
+main #search h1 span:nth-child(5)::after {
   content: "o";
   color: green;
 }
-main h1 span:nth-child(6)::after {
+main #search h1 span:nth-child(6)::after {
   content: "l";
   color: red;
 }
-main h1::after {
+main #search h1::after {
   content: "!";
   color: blue;
 }

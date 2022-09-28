@@ -6,12 +6,14 @@ header {
    @extend %header;
 }
 main {
-   h1 {
-	  @extend %search-hdr;
+   #search {
+	  h1 {
+		 @extend %search-hdr;
+	  }
+	  #search-entry {
+		 @extend %search-entry;
+	  } 
    }
-   #search-entry {
-	  @extend %search-entry;
-   } 
    #search-output {
 	  @extend %search-output;
    }

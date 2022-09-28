@@ -9,35 +9,40 @@
    	<title>Googol</title>
 	</head>
 	<body>
-	    <header>
+	    <header id="header">
 		    <div id="company-identifier">
 			    <i id="logo-icon" class="fa-brands fa-google"></i>
 			    <span id="company-name">Googol</span>
 		    </div>
-		    <nav>
-			    <menu>
+		    <nav id="nav">
+			    <menu id="menu">
+				    <li id="search-trigger">
+					   <i class="fa-solid fa-magnifying-glass"></i>
+					</li>
 				    <li>About</li>
 					<li>Login</li>
 			    </menu>
 		    </nav>
 	    </header>
-	    <main>
-			<h1>
-			   <span></span>
-			   <span></span>
-			   <span></span>
-			   <span></span>
-			   <span></span>
-			   <span></span>
-			</h1>
-			<section id="search-entry">
-			   <form>
-				   <button type="submit">
-					   <i class="fa-solid fa-magnifying-glass"></i>
-				   </button>
-				   <input type="search" maxlength="45">
-			   </form>
-			</section>
+	    <main id="main">
+		    <div id="search" class="hidden">
+			   <h1>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+			   </h1>
+			   <section id="search-entry">
+				  <form name="search-form">
+					  <button name="submit-btn" type="submit">
+						  <i class="fa-solid fa-magnifying-glass"></i>
+					  </button>
+					  <input name="search-term" type="search" maxlength="45">
+				  </form>
+			   </section>
+			</div>
 			<section id="search-output" class="hidden">
 			   <div id="searching">
 				  Searching
