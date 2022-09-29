@@ -25,12 +25,16 @@ main {
    #search {
 	  @include modal($modal-width, $modal-bg-color, $modal-text-color, true);
 	  @include box-shadow(0, 3px, 10px, 0, rgb(0 0 0 / 0.2), false);
+
+	  &.hidden {
+		 display: none;
+	  }
+	  & > .modal-body > #search-entry.hidden {
+		 display: none;
+	  }		 
    }
    #search-output {
 	  @extend %search-output;
-   }
-   #search.hidden {
-	  display: none;
    }
 }
 footer {

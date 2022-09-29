@@ -24,7 +24,7 @@
 		    </div>
 		    <nav id="nav">
 			    <menu id="menu">
-				    <li id="search-trigger">
+				    <li id="search-trigger" class="hidden">
 					   <i class="fa-solid fa-magnifying-glass"></i>
 					</li>
 				    <li>About</li>
@@ -93,7 +93,7 @@
 						  <li>Lorem ipsum.</li>
 					   </ul>
 					</div>
-					<button class="btn">Select</button>
+					<button id="product-btn-vegan" class="btn">Select</button>
 				</div>
 				<div class="product">
 				    <div class="product-header">
@@ -113,7 +113,7 @@
 						  <li>Lorem ipsum.</li>
 					   </ul>
 					</div>
-					<button class="btn">Select</button>
+					<button id="product-btn-veggie" class="btn">Select</button>
 				</div>
 				<div class="product">
 					<div class="product-header">
@@ -133,12 +133,12 @@
 						  <li>Lorem ipsum.</li>
 					   </ul>
 					</div>
-					<button class="btn">Select</button>
+					<button id="product-btn-non" class="btn">Select</button>
 				</div>
 			</section>
 		    <div id="search" class="hidden">
-			   <div class="modal-header">
-				  <div class="modal-header-close">
+			   <div class="modal-header" id="modal-header">
+				  <div class="modal-header-close" id="modal-header-close">
 					 <i class="fa-solid fa-xmark"></i>
 				  </div>
 				  <div class="modal-header-text">
@@ -153,22 +153,27 @@
 					 </h1>
 				  </div>
 			   </div>
-			   <div class="modal-body">
-				  <section id="search-entry">
+			   <div class="modal-body" id="modal-body">
+				  <section id="search-entry" class="hidden">
 					 <form name="search-form">
 						 <button name="submit-btn" type="submit">
 							 <i class="fa-solid fa-magnifying-glass"></i>
 						 </button>
-						 <input name="search-term" type="search" maxlength="45">
+						 <input
+						 	name="search-term"
+							type="search"
+							maxlength="45"
+							pattern="^[a-z]{1,}$"
+						 >
 					 </form>
+				  </section>
+				  <section id="search-output" class="hidden">
+					 <div id="searching">
+						Searching
+					 </div>
 				  </section>
 			   </div>
 			</div>
-			<section id="search-output" class="hidden">
-			   <div id="searching">
-				  Searching
-			   </div>
-			</section>
 	    </main>
 	    <footer>
 		   <section id="site-info">

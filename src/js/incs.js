@@ -8,11 +8,16 @@ const searchTrigger = menuItems.namedItem("search-trigger");
 
 const main = body.children.namedItem("main");
 const search = main.children.namedItem("search");
+const modalHdr = search.children.namedItem("modal-header");
+const modalBody = search.children.namedItem("modal-body");
+const searchEntry = modalBody.children.namedItem("search-entry");
+
+const searchOutput = modalBody.children.namedItem("search-output");
 
 const searchForm = document.forms["search-form"];
 const submitBtn = searchForm.elements["submit-btn"];
 const searchTerm = searchForm.elements["search-term"];
 
-const searchOutput = main.children.namedItem("search-output");
+const products = main.children.namedItem("products");
 
-export { searchTrigger, search, searchTerm, submitBtn, searchOutput };
+export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, submitBtn, products };
