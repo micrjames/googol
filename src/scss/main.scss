@@ -1,4 +1,4 @@
-@import 'utils/config', 'utils/res-mq', 'utils/utils', 'utils/button', 'parts/header', 'parts/footer', 'parts/search/search-output', 'modal/modal', 'parts/features', 'parts/products';
+@import 'utils/config', 'utils/res-mq', 'utils/utils', 'utils/button', 'parts/header', 'parts/footer', 'parts/search/search-output', 'modal/modal', 'parts/features', 'parts/products', 'parts/recipes';
 
 $modal-width: 90%;
 $modal-bg-color: white;
@@ -23,7 +23,11 @@ main {
 	  @extend %products;
    }
    #search {
-	  @include modal($modal-width, $modal-bg-color, $modal-text-color, true);
+	  @include modal($modal-width, $modal-bg-color, $modal-text-color, true, false);
+	  position: absolute;
+	  top: 10vh;
+	  left: 50%;
+	  transform: translateX(-50%);
 	  @include box-shadow(0, 3px, 10px, 0, rgb(0 0 0 / 0.2), false);
 
 	  &.hidden {
@@ -32,9 +36,12 @@ main {
 	  & > .modal-body > #search-entry.hidden {
 		 display: none;
 	  }		 
-   }
-   #search-output {
-	  @extend %search-output;
+	  #search-output {
+		 @extend %search-output;
+	  }
+	  #recipe-results {
+		 @extend %recipe-result;
+	  }
    }
 }
 footer {

@@ -1,3 +1,5 @@
+import { fetchData } from "../js/fetchData.js";
+
 const body = document.body;
 
 const header = body.children.namedItem("header");
@@ -13,6 +15,7 @@ const modalBody = search.children.namedItem("modal-body");
 const searchEntry = modalBody.children.namedItem("search-entry");
 
 const searchOutput = modalBody.children.namedItem("search-output");
+const recipeResults = modalBody.children.namedItem("recipe-results");
 
 const searchForm = document.forms["search-form"];
 const submitBtn = searchForm.elements["submit-btn"];
@@ -20,4 +23,9 @@ const searchTerm = searchForm.elements["search-term"];
 
 const products = main.children.namedItem("products");
 
-export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, submitBtn, products };
+const fetchResults = async () => {
+   return await fetchData("../recipe.json");
+};
+const resultsData = await fetchResults();
+
+export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, recipeResults, submitBtn, products, resultsData };
