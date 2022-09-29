@@ -28,7 +28,7 @@
    }
    nav {
 	  margin-top: 0.35rem;
-	  margin-right: 2rem;
+	  margin-right: 1.65rem;
 	  menu {
 		 list-style-type: none;
 		 li {
@@ -38,14 +38,26 @@
 
 			@include transition-ease;
 
+			&:last-child {
+			   i {
+				  font-size: 1.75rem;
+			   }
+			   span {
+				  position: relative;
+				  bottom: 20px;
+				  right: 15px;
+				  background-color: red;
+				  padding: 0.15rem 0.5rem;
+				  border-radius: 3px;
+				  font-size: 0.85rem;
+			   }
+			}
+
 			&:not(:last-child) {
 			   margin-right: 1.2rem;
 			}
 			&:hover {
 			   font-weight: bolder;
-			}
-
-			i {
 			}
 		 }
 	  }
