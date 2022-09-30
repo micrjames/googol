@@ -24,6 +24,10 @@ const searchTerm = searchForm.elements["search-term"];
 
 const products = main.children.namedItem("products");
 
-const resultsData = await fetchData("../recipe.json");
+const categoryVeganData = await fetchData("../recipe_category_vegan.json");
+const categoryVegetarianData = await fetchData("../recipe_category_vegetarian.json");
+const categoryNonData = await fetchData("../recipe_category_non.json");
 
-export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, recipeResult, submitBtn, products, resultsData };
+const categoryResults = modalBody.children.namedItem("category-results");
+
+export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData, categoryResults };

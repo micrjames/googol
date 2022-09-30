@@ -1,4 +1,5 @@
-import { searchTrigger, search, searchEntry, searchOutput, recipeResult, searchTerm, submitBtn, products, resultsData } from "./incs.js";
+import { searchTrigger, search, searchEntry, searchOutput, searchTerm, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData, categoryResults } from "./incs.js";
+import { createCategoryResults } from "./categoryResults.js";
 import { setRecipeResult } from "./recipeResults.js";
 import { closeBtn } from "./modal.js";
 
@@ -28,9 +29,27 @@ for(const product of products.children) {
 		    child.addEventListener("click", function() {
 				search.classList.remove("hidden");
 			    searchTrigger.classList.remove("hidden");
+
+			    const btnID = this.getAttribute("id");
+			    const btnIDSplitArr = btnID.split("-");
+			    let recipeCategory;
+
+			    switch(btnIDSplitArr[2]) {
+				    case "vegan":
+					   recipeCategory = categoryVeganData;
+					break;
+					case "vegetarian":
+					   recipeCategory = categoryVegetarianData;
+					break;
+					case "non":
+					   recipeCategory = categoryNonData;
+					break;
+				}
+
+			    createCategoryResults(recipeCategory.meals);
 			});
 		}
 	}
 }
 
-setRecipeResult(recipeResult, resultsData.meals[0]);
+// setRecipeResult(recipeResult, resultsData.meals[0]);
