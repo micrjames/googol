@@ -324,11 +324,11 @@ main #products .product .btn {
 main #search #recipe-results #recipe-result {
   margin: 0 auto;
   border: 1px solid lightgrey;
-  width: 75%;
+  width: 95%;
 }
 main #search #recipe-results #recipe-result-image-thumb {
   width: 100%;
-  height: 250px;
+  height: 350px;
 }
 main #search #recipe-results #recipe-result-title {
   position: relative;
