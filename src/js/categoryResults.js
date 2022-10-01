@@ -17,6 +17,8 @@ const createCategoryResults = function(data) {
 	   categoryResult.appendChild(categoryResultTitle); 
 	   categoryResults.appendChild(categoryResult);
 	}
+
+    return categoryResults;
 };
 
 export { createCategoryResults };
