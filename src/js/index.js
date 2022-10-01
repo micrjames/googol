@@ -1,7 +1,6 @@
 import { searchTrigger, search, searchEntry, searchOutput, searchTerm, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData } from "./incs.js";
-import { createCategoryResults } from "./categoryResults.js";
+import { setCategoryResults, resetCategoryResults } from "./categoryResults.js";
 import { closeBtn } from "./modal.js";
-import { createBtn, createBtnGroup } from "./DOMutils.js";
 
 submitBtn.addEventListener("click", function(event) {
 	event.preventDefault();
@@ -46,11 +45,8 @@ for(const product of products.children) {
 					break;
 				}
 
-			    const categoryResults = createCategoryResults(recipeCategory.meals);
-			    const categoryResultsPrevBtn = createBtn("category-results-prev-btn", "btn", "less-than");                                                                        
-                const categoryResultsNextBtn = createBtn("category-results-next-btn", "btn", "greater-than");  
-			    const categoryResultsBtnGroup = createBtnGroup("category-results-btn-group", [categoryResultsPrevBtn, categoryResultsNextBtn]);
-				categoryResults.appendChild(categoryResultsBtnGroup);			    
+			    resetCategoryResults();
+			    setCategoryResults(0, recipeCategory.meals);
 			});
 		}
 	}
