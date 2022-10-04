@@ -1,5 +1,6 @@
-import { searchTrigger, search, searchEntry, searchOutput, searchTerm, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData } from "./incs.js";
+import { searchTrigger, search, searchEntry, searchOutput, searchTerm, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData, recipeResult, categoryResults } from "./incs.js";
 import { setCategoryResults, resetCategoryResults } from "./categoryResults.js";
+import { resetRecipeResult } from "./recipeResults.js";
 import { closeBtn } from "./modal.js";
 
 submitBtn.addEventListener("click", function(event) {
@@ -17,6 +18,9 @@ submitBtn.addEventListener("click", function(event) {
 closeBtn.addEventListener("click", function() {
     search.classList.add("hidden");
 	searchTrigger.classList.add("hidden");
+    resetRecipeResult(recipeResult);
+    recipeResult.parentElement.classList.add("hidden");
+    categoryResults.classList.remove("hidden");
 });
 searchTrigger.addEventListener("click", function() {
     searchEntry.classList.remove("hidden");
@@ -51,5 +55,3 @@ for(const product of products.children) {
 		}
 	}
 }
-
-// setRecipeResult(recipeResult, resultsData.meals[0]);

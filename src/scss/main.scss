@@ -45,8 +45,9 @@ main {
 	  #category-results {
 		 display: grid;
 		 grid-template-columns: repeat(3, auto);
-		 grid-template-rows: repeat(2, auto);
-		 grid-row-gap: 1.75rem;
+		 &.hidden {
+			display: none;
+		 }
 		 .category-result {
 			 margin: 0 auto;
 			 width: 50%;
@@ -62,6 +63,10 @@ main {
 			   padding: 0.75rem 0.5rem;
 			   text-align: center;
 			   font-size: 1.2rem;
+			 }
+			 .btn {
+				@include button(1.25rem, 0, 0);
+				width: 100%;
 			 }
 		 }
 		 &-btn-group {

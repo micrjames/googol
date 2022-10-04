@@ -28,6 +28,10 @@ const categoryVeganData = await fetchData("../recipe_category_vegan.json");
 const categoryVegetarianData = await fetchData("../recipe_category_vegetarian.json");
 const categoryNonData = await fetchData("../recipe_category_non.json");
 
+const getRecipe = async function(mealId) {
+    return await fetchData(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`); 
+};
+
 const categoryResults = modalBody.children.namedItem("category-results");
 
-export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData, categoryResults };
+export { modalHdr, searchTrigger, search, searchEntry, searchTerm, searchOutput, submitBtn, products, categoryVeganData, categoryVegetarianData, categoryNonData, categoryResults, recipeResult, getRecipe };
